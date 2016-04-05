@@ -12,7 +12,12 @@ RUN "$APP_TOOLS/installer/install.sh" \
     echo "deb http://nginx.org/packages/mainline/debian/ "$(lsb_release -cs)" nginx" >> /etc/apt/sources.list && \
     echo "deb-src http://nginx.org/packages/mainline/debian/ "$(lsb_release -cs)" nginx" >> /etc/apt/sources.list && \
     "$APP_TOOLS/installer/install.sh" \
-        nginx && \
+	nginx \
+	ca-certificates \
+	nginx-module-xslt \
+	nginx-module-geoip \
+	nginx-module-image-filter \
+	gettext-base && \
     "$APP_TOOLS/installer/uninstall.sh" \
         curl && \
     "$APP_TOOLS/installer/cleanup.sh"
