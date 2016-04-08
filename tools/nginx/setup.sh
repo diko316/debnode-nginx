@@ -9,3 +9,6 @@ echo "deb http://nginx.org/packages/mainline/debian/ ${RELEASE} nginx" >> /etc/a
 echo "deb-src http://nginx.org/packages/mainline/debian/ ${RELEASE} nginx" >> /etc/apt/sources.list
 
 ${APP_TOOLS}/installer/install.sh nginx || exit 3
+
+### create start nginx shortcut
+ln -s ${APP_TOOLS}/nginx/start.sh /usr/local/bin/start-nginx
