@@ -20,5 +20,4 @@ RUN auto-build \
 #    "$APP_TOOLS/installer/uninstall.sh" \
 #        curl
 
-
 CMD $APP_TOOLS/nginx/start.sh
