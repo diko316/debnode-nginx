@@ -2,6 +2,6 @@
 
 NXTOOLS_DIR=$(dirname $(readlink -m $0))
 
-"${APP_TOOLS}/watcher/watch-source.sh"
+auto-sync
 
 "${NXTOOLS_DIR}/run.sh"
